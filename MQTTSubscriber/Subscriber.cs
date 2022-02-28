@@ -13,6 +13,9 @@ namespace Consumer
     public class Subscriber
     {
         private static bool keepRunning = true;
+        private static IMqttClient _client;
+        private static MqttFactory _mqttFactory;
+
         public static string BrokerIp { get; set; }
 
         public static string BrokerPort { get; set; }
@@ -42,31 +45,37 @@ namespace Consumer
             }
 
 
-            //var endApp = false;
-            var mqttFactory = new MqttFactory();
-            var client = mqttFactory.CreateMqttClient();
+            _mqttFactory = new MqttFactory();
+            _client = _mqttFactory.CreateMqttClient();
             var options = new MqttClientOptionsBuilder()
                 .WithClientId(Guid.NewGuid().ToString())
                 .WithTcpServer(BrokerIp, Convert.ToInt32(BrokerPort))
                 .WithCleanSession()
                 .Build();
-            client.UseConnectedHandler(async e =>
+            /////////////////////////////////////////////////////////////
+            // As soon as client is connected to broker subscribe to topic
+            //////////////////////////////////////////////////////////////
+            _client.UseConnectedHandler(async e =>
             {
                 Console.WriteLine("Connected to the broker successfully");
                 var topicFilter = new MqttTopicFilterBuilder()
                                      .WithTopic(Topic)
                                      .Build();
-                await client.SubscribeAsync(topicFilter);
+        
+                await _client.SubscribeAsync(topicFilter);
 
 
             });
 
-            client.UseDisconnectedHandler(e =>
+            _client.UseDisconnectedHandler(e =>
             {
                 Console.WriteLine("Disconnected from the broker");
             });
 
-            client.UseApplicationMessageReceivedHandler(async e =>
+            //////////////////////////////////////////////////////////
+            // As soon as new message arrives update the Database
+            //////////////////////////////////////////////////////////
+            _client.UseApplicationMessageReceivedHandler(async e =>
             {
                 var payload = e.ApplicationMessage?.Payload == null ? null : Encoding.UTF8.GetString(e.ApplicationMessage?.Payload);
                 var sensor = JsonConvert.DeserializeObject<SensorMeasurement>(payload);
@@ -80,16 +89,13 @@ namespace Consumer
 
             while (keepRunning)
             {
-                if (!client.IsConnected)
+                if (!_client.IsConnected)
                 {
-                    await client.ConnectAsync(options);
+                    await _client.ConnectAsync(options);
                 }
 
             }
         }
-
-
-
 
         public static async Task AddRecord(SensorMeasurement measurement)
         {

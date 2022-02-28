@@ -26,7 +26,7 @@ namespace Wpf.CartesianChart.Basic_Bars
         }
 
         private void RenderControl(DateTime startTime, string sensorId)
-        {
+        {    //////////////////
             // Fetch Data from the MongoDB Database according to query
             _tempRecord = ReadRecord();
 
@@ -39,17 +39,22 @@ namespace Wpf.CartesianChart.Basic_Bars
 
 
                 for (var i = 0; i < _tempRecord.CreatedAt.Count; i++)
-                {
+                {   /////////////////////////
                     // Check if less than 20 values has been returned from the DataBase
+                    ////////////////////////////
                     if (_tempRecord.Value[i] == null || _tempRecord.CreatedAt[i] == null)
                         break;
                     else
-                    {
+                    {   ///////////////////////////////////////////////
+                        /////////Converting lists to arrays
+                        ////////////////////////////////////////////////
                         valuesDouble[i] = Convert.ToDouble(_tempRecord.Value[i]);
                         sTimeStamp[i] = _tempRecord.CreatedAt[i].ToString();
                     }
                 }
+                ////////////////////
                 // Datapreparation for the LiveChartDisplay
+                /////////////////////
                 var columnSeries = new ColumnSeries
                 {
                     Title = name,

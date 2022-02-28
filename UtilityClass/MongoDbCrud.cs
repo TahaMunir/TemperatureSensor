@@ -60,6 +60,14 @@ namespace UtilityClass
             }
         }
 
+        /// <summary>
+        /// Returns Sensor Record from startingTime onwards and max DisplayField
+        /// </summary>
+        /// <param name="startTime"></param>
+        /// <param name="sensorId"></param>
+        /// <param name="collectionName"></param>
+        /// <param name="dbName"></param>
+        /// <returns>Returns sensor record according to the length of DisplayField</returns>
         public SensorRecord GetSensorData(DateTime startTime, string sensorId, string collectionName, string dbName)
         {
             _db = Client.GetDatabase(dbName);
@@ -90,6 +98,12 @@ namespace UtilityClass
             return null;
         }
 
+        /// <summary>
+        /// Fetch Complete Document from MongoDb for a Sensor
+        /// </summary>
+        /// <param name="sensorid"></param>
+        /// <param name="collectionName"></param>
+        /// <returns></returns>
         private SensorRecord FetchData(string sensorid, string collectionName)
         {
             var mongodbFilterBuilder = Builders<SensorRecord>.Filter;
@@ -101,7 +115,11 @@ namespace UtilityClass
             var retData = query.FirstOrDefault();
             return retData;
         }
-
+        /// <summary>
+        /// Search for the starting index acoording to User StartTime from UI
+        /// </summary>
+        /// <param name="startTime"></param>
+        /// <returns>startIndex</returns>
         private int FindStartIndex(DateTime startTime)
         {
             var startIndex = -1;

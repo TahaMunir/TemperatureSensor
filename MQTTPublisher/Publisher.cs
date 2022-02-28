@@ -13,6 +13,7 @@ namespace Producer
     {
         private static bool keepRunning = true;
         private static IMqttClient _client;
+        private static MqttFactory _mqttFactory;
         private static KeyValuePair<DateTime, double> _sensorDataLog;
         private static System.Timers.Timer _watchTimer;
         private const int FailureDelay = 3; // 5 seconds Failure Delay
@@ -31,6 +32,7 @@ namespace Producer
                 e.Cancel = true;
                 Publisher.keepRunning = false;
             };
+           
             if (args is { Length: 3 })
             {
                 BrokerIp = args[0];
@@ -39,8 +41,8 @@ namespace Producer
 
             }
             var temperatureSensor = new Simulator(id: "d140xw", samplerate: 500);
-            var mqttFactory = new MqttFactory();
-            _client = mqttFactory.CreateMqttClient();
+            _mqttFactory = new MqttFactory();
+            _client = _mqttFactory.CreateMqttClient();
 
 
             // register with an event
@@ -73,7 +75,9 @@ namespace Producer
             }
         }
 
-
+        /// <summary>
+        /// Notify about the sensor failure at console
+        /// </summary>
         private static void OnTimedEvent(object source, System.Timers.ElapsedEventArgs e)
         {
 
@@ -101,8 +105,11 @@ namespace Producer
 
             }
         }
-
-        //Listener Method
+        /// <summary>
+        /// /////Listener Method
+        /// </summary>
+        /// <param name="measurement"></param>
+        /// Calls the publish method and pass the temperature measurements
         private static async Task SensorListener(SensorMeasurement measurement)
         {
             _sensorDataLog = new KeyValuePair<DateTime, double>(measurement.TimeStamp, measurement.Value);
@@ -121,10 +128,12 @@ namespace Producer
                 PublishMessage(_client, measurement);
             }
         }
-
+        /// <summary>
+        ///// Timer to detect the failure of sensor
+        /// </summary>
         private static void SetWatchTimer()
         {
-            // Create a timer and set a two second interval.
+            // Create a timer and set a failure delay interval.
             _watchTimer = new System.Timers.Timer();
             _watchTimer.Interval = FailureDelay*1000;
 
