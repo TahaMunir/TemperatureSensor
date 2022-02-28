@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Consumer": {
+      "commandName": "Project",
+      "commandLineArgs": "\"localhost\" \"1883\" \"machine10/device06/temperature\" \"Measurements\" \"SensorReadings\""
+    }
+  }
+}

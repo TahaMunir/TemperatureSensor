@@ -1,0 +1,13 @@
+D:\Entwicklung\TaskIO\WpfApp.Object.Lib\bin\Debug\netcoreapp3.1\WpfApp.Object.Lib.deps.json
+D:\Entwicklung\TaskIO\WpfApp.Object.Lib\bin\Debug\netcoreapp3.1\WpfApp.Object.Lib.dll
+D:\Entwicklung\TaskIO\WpfApp.Object.Lib\bin\Debug\netcoreapp3.1\WpfApp.Object.Lib.pdb
+D:\Entwicklung\TaskIO\WpfApp.Object.Lib\bin\Debug\netcoreapp3.1\UtilityClass.dll
+D:\Entwicklung\TaskIO\WpfApp.Object.Lib\bin\Debug\netcoreapp3.1\UtilityClass.pdb
+D:\Entwicklung\TaskIO\WpfApp.Object.Lib\obj\Debug\netcoreapp3.1\WpfApp.Object.Lib.csproj.AssemblyReference.cache
+D:\Entwicklung\TaskIO\WpfApp.Object.Lib\obj\Debug\netcoreapp3.1\WpfApp.Object.Lib.GeneratedMSBuildEditorConfig.editorconfig
+D:\Entwicklung\TaskIO\WpfApp.Object.Lib\obj\Debug\netcoreapp3.1\WpfApp.Object.Lib.AssemblyInfoInputs.cache
+D:\Entwicklung\TaskIO\WpfApp.Object.Lib\obj\Debug\netcoreapp3.1\WpfApp.Object.Lib.AssemblyInfo.cs
+D:\Entwicklung\TaskIO\WpfApp.Object.Lib\obj\Debug\netcoreapp3.1\WpfApp.Object.Lib.csproj.CoreCompileInputs.cache
+D:\Entwicklung\TaskIO\WpfApp.Object.Lib\obj\Debug\netcoreapp3.1\WpfApp.Object.Lib.csproj.CopyComplete
+D:\Entwicklung\TaskIO\WpfApp.Object.Lib\obj\Debug\netcoreapp3.1\WpfApp.Object.Lib.dll
+D:\Entwicklung\TaskIO\WpfApp.Object.Lib\obj\Debug\netcoreapp3.1\WpfApp.Object.Lib.pdb
