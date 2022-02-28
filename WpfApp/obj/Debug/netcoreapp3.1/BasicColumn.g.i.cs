@@ -95,7 +95,7 @@ namespace Wpf.CartesianChart.Basic_Bars {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WpfApp;component/basiccolumn.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WpfApp;V1.0.0.0;component/basiccolumn.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\BasicColumn.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
