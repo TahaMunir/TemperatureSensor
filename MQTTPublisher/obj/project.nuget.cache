@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EA+YXxZWrHkXMO+8e+n1TENGvDkyTpnJWrIz1ZrfKq4fEHa3HolxlofZpEiJmXrIq9w2ZrWPLlLANyOygF9PQA==",
+  "dgSpecHash": "aLfpYT/ZegHjArQrpqNEJFnQX86zUM6leWypbX/ES1j5qUuQc4bftnYZ5wl4bVfQyoOV4xYU90oLJdDbIRA0dA==",
   "success": true,
-  "projectFilePath": "D:\\Entwicklung\\TemperatureSensorTask\\MQTTPublisher\\Producer.csproj",
+  "projectFilePath": "D:\\Entwicklung\\TemperatureSensor\\MQTTPublisher\\Producer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\msy3fe\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
     "C:\\Users\\msy3fe\\.nuget\\packages\\mongodb.bson\\2.14.1\\mongodb.bson.2.14.1.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ciwOZGByk5SeOyiGaY6KV24dQhfZiH4/oUCNWEEvIPA4buwbb4xFMyChnn4NfW84YJ+vXrKVfKLIY1KYlWwDFA==",
+  "dgSpecHash": "hmJVcmnkhV/QJx3qBYW2jS482Iqx7kpnYIRv+yHjGP4+Co+iUfrj6U2RnBP9zgY7o4cTnR4nQpIeirUT9wH40w==",
   "success": true,
-  "projectFilePath": "D:\\Entwicklung\\TemperatureSensorTask\\UtilityClass\\UtilityClass.csproj",
+  "projectFilePath": "D:\\Entwicklung\\TemperatureSensor\\UtilityClass\\UtilityClass.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\msy3fe\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
     "C:\\Users\\msy3fe\\.nuget\\packages\\mongodb.bson\\2.14.1\\mongodb.bson.2.14.1.nupkg.sha512",

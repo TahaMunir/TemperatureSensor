@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Entwicklung\TemperatureSensorTask\WpfApp\obj\Debug\netcoreapp3.1\
+D:\Entwicklung\TemperatureSensor\WpfApp\obj\Debug\netcoreapp3.1\
 WpfApp
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-D:\Entwicklung\TemperatureSensorTask\WpfApp\App.xaml
+D:\Entwicklung\TemperatureSensor\WpfApp\App.xaml
 2793729138
 
 6-821611438
-206896333926
+206-503175116
 BasicColumn.xaml;MainWindow.xaml;
 
-True
+False
 

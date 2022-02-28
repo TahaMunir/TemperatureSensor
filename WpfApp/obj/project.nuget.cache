@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Uq9Mo9HDmInLz0iNT1n+yOcBDBPu3qC/ZzuWUHq+27UNlZ2y01fbGdJZTc03TxdzRYx9JUoDF8G0u3SIC+qqhQ==",
+  "dgSpecHash": "YWGLypYEgU+yEgVDxs9HKx5viMNKZPnJFjzqULn420ucNDK7stqdqmTyUAv6EpvxH8b9/8qMl2vYSv2BSJ3Y9A==",
   "success": true,
-  "projectFilePath": "D:\\Entwicklung\\TemperatureSensorTask\\WpfApp\\WpfApp.csproj",
+  "projectFilePath": "D:\\Entwicklung\\TemperatureSensor\\WpfApp\\WpfApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\msy3fe\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
     "C:\\Users\\msy3fe\\.nuget\\packages\\extended.wpf.toolkit\\4.2.0\\extended.wpf.toolkit.4.2.0.nupkg.sha512",

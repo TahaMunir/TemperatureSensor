@@ -488,11 +488,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Entwicklung\\TemperatureSensorTask\\MQTTSubscriber\\Consumer.csproj",
+      "projectUniqueName": "D:\\Entwicklung\\TemperatureSensor\\MQTTSubscriber\\Consumer.csproj",
       "projectName": "Consumer",
-      "projectPath": "D:\\Entwicklung\\TemperatureSensorTask\\MQTTSubscriber\\Consumer.csproj",
+      "projectPath": "D:\\Entwicklung\\TemperatureSensor\\MQTTSubscriber\\Consumer.csproj",
       "packagesPath": "C:\\Users\\msy3fe\\.nuget\\packages\\",
-      "outputPath": "D:\\Entwicklung\\TemperatureSensorTask\\MQTTSubscriber\\obj\\",
+      "outputPath": "D:\\Entwicklung\\TemperatureSensor\\MQTTSubscriber\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -516,8 +516,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Entwicklung\\TemperatureSensorTask\\UtilityClass\\UtilityClass.csproj": {
-              "projectPath": "D:\\Entwicklung\\TemperatureSensorTask\\UtilityClass\\UtilityClass.csproj"
+            "D:\\Entwicklung\\TemperatureSensor\\UtilityClass\\UtilityClass.csproj": {
+              "projectPath": "D:\\Entwicklung\\TemperatureSensor\\UtilityClass\\UtilityClass.csproj"
             }
           }
         }

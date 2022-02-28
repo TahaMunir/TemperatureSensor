@@ -395,11 +395,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Entwicklung\\TemperatureSensorTask\\UtilityClass\\UtilityClass.csproj",
+      "projectUniqueName": "D:\\Entwicklung\\TemperatureSensor\\UtilityClass\\UtilityClass.csproj",
       "projectName": "UtilityClass",
-      "projectPath": "D:\\Entwicklung\\TemperatureSensorTask\\UtilityClass\\UtilityClass.csproj",
+      "projectPath": "D:\\Entwicklung\\TemperatureSensor\\UtilityClass\\UtilityClass.csproj",
       "packagesPath": "C:\\Users\\msy3fe\\.nuget\\packages\\",
-      "outputPath": "D:\\Entwicklung\\TemperatureSensorTask\\UtilityClass\\obj\\",
+      "outputPath": "D:\\Entwicklung\\TemperatureSensor\\UtilityClass\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
