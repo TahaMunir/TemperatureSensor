@@ -29,7 +29,6 @@ namespace Producer
             };
             DataGenerated?.Invoke(temperatureValues);
 
-
         }
 
         public void Read()

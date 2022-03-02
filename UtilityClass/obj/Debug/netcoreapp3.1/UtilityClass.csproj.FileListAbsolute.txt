@@ -36,3 +36,13 @@ D:\Entwicklung\TemperatureSensorTask\UtilityClass\obj\Debug\netcoreapp3.1\Utilit
 D:\Entwicklung\TemperatureSensorTask\UtilityClass\obj\Debug\netcoreapp3.1\UtilityClass.csproj.CoreCompileInputs.cache
 D:\Entwicklung\TemperatureSensorTask\UtilityClass\obj\Debug\netcoreapp3.1\UtilityClass.dll
 D:\Entwicklung\TemperatureSensorTask\UtilityClass\obj\Debug\netcoreapp3.1\UtilityClass.pdb
+D:\Entwicklung\TemperatureSensor\UtilityClass\bin\Debug\netcoreapp3.1\UtilityClass.deps.json
+D:\Entwicklung\TemperatureSensor\UtilityClass\bin\Debug\netcoreapp3.1\UtilityClass.dll
+D:\Entwicklung\TemperatureSensor\UtilityClass\bin\Debug\netcoreapp3.1\UtilityClass.pdb
+D:\Entwicklung\TemperatureSensor\UtilityClass\obj\Debug\netcoreapp3.1\UtilityClass.csproj.AssemblyReference.cache
+D:\Entwicklung\TemperatureSensor\UtilityClass\obj\Debug\netcoreapp3.1\UtilityClass.GeneratedMSBuildEditorConfig.editorconfig
+D:\Entwicklung\TemperatureSensor\UtilityClass\obj\Debug\netcoreapp3.1\UtilityClass.AssemblyInfoInputs.cache
+D:\Entwicklung\TemperatureSensor\UtilityClass\obj\Debug\netcoreapp3.1\UtilityClass.AssemblyInfo.cs
+D:\Entwicklung\TemperatureSensor\UtilityClass\obj\Debug\netcoreapp3.1\UtilityClass.csproj.CoreCompileInputs.cache
+D:\Entwicklung\TemperatureSensor\UtilityClass\obj\Debug\netcoreapp3.1\UtilityClass.dll
+D:\Entwicklung\TemperatureSensor\UtilityClass\obj\Debug\netcoreapp3.1\UtilityClass.pdb

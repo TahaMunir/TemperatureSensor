@@ -16,7 +16,7 @@ namespace Producer
         private static MqttFactory _mqttFactory;
         private static KeyValuePair<DateTime, double> _sensorDataLog;
         private static System.Timers.Timer _watchTimer;
-        private const int FailureDelay = 3; // 5 seconds Failure Delay
+        private const int FailureDelay = 5; // 5 seconds Failure Delay
 
         public static string BrokerIp { get; set; }
 
@@ -40,7 +40,7 @@ namespace Producer
                 Topic = args[2];
 
             }
-            var temperatureSensor = new Simulator(id: "d140xw", samplerate: 500);
+            var temperatureSensor = new Simulator(id: "rtd100", samplerate: 5);
             _mqttFactory = new MqttFactory();
             _client = _mqttFactory.CreateMqttClient();
 
@@ -62,15 +62,6 @@ namespace Producer
 
             while (keepRunning)
             {
-                if (!_client.IsConnected)
-                {
-                    var options = new MqttClientOptionsBuilder()
-                        .WithClientId(Guid.NewGuid().ToString())
-                        .WithTcpServer(BrokerIp, Convert.ToInt32(BrokerPort))
-                        .WithCleanSession()
-                        .Build();
-                    await _client.ConnectAsync(options);
-                }
                 temperatureSensor.Read();
             }
         }
@@ -113,6 +104,7 @@ namespace Producer
         private static async Task SensorListener(SensorMeasurement measurement)
         {
             _sensorDataLog = new KeyValuePair<DateTime, double>(measurement.TimeStamp, measurement.Value);
+
             if (!_client.IsConnected)
             {
                 var options = new MqttClientOptionsBuilder()

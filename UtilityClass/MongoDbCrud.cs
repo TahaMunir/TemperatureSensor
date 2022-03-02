@@ -14,6 +14,7 @@ namespace UtilityClass
         public const int DisplayField = 20;
         private IMongoDatabase _db;
         private SensorRecord _mongoDbDocument;
+        private SensorRecord _sortedDocument;
 
         public MongoClient Client;
 
@@ -71,10 +72,12 @@ namespace UtilityClass
         public SensorRecord GetSensorData(DateTime startTime, string sensorId, string collectionName, string dbName)
         {
             _db = Client.GetDatabase(dbName);
-
             _mongoDbDocument = FetchData(sensorId, collectionName);
+
             if (_mongoDbDocument != null)
             {
+                _mongoDbDocument = SortData(_mongoDbDocument.SensorId);
+
                 var index = FindStartIndex(startTime);
                 if (index >= 0)
                 {
@@ -131,6 +134,27 @@ namespace UtilityClass
             }
 
             return startIndex;
+        }
+        private SensorRecord SortData(string sensorid)
+        {
+            var sortedData = new SensorRecord(sensorid);
+            sortedData.Value = new List<string>(_mongoDbDocument.Value.Count);
+            sortedData.CreatedAt = new List<DateTime>(_mongoDbDocument.Value.Count);
+            for (int i = 0; i < _mongoDbDocument.Value.Count; i++)
+            {
+                var timeStamp_temp = _mongoDbDocument.CreatedAt[i];
+                var value_temp = _mongoDbDocument.Value[i];
+                var currentIndex = i;
+                while (currentIndex > 0 && sortedData.CreatedAt[currentIndex - 1].Subtract(timeStamp_temp).TotalSeconds > 0)
+                {
+                    currentIndex--;
+                }
+                sortedData.CreatedAt.Insert(currentIndex, timeStamp_temp);
+                sortedData.Value.Insert(currentIndex, value_temp);
+
+            }
+            return sortedData;
+            
         }
     }
 }
